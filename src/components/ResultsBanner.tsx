@@ -5,7 +5,7 @@ const ResultsBanner = () => (
       <div className="hidden md:block w-full overflow-hidden rounded-2xl">
         <img
           src="https://live.lptedtech.com/wp-content/uploads/2025/08/IPMAT_2025Desktop.jpg"
-          alt="IPMAT 2025 Results"
+          alt="CUET 2025 Results"
           className="w-full object-cover"
           loading="lazy"
         />
@@ -14,7 +14,7 @@ const ResultsBanner = () => (
       <div className="md:hidden w-full overflow-hidden rounded-2xl">
         <img
           src="https://live.lptedtech.com/wp-content/uploads/2025/08/IPMAT_2025.jpg"
-          alt="IPMAT 2025 Results"
+          alt="CUET 2025 Results"
           className="w-full object-cover"
           loading="lazy"
         />

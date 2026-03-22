@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 const faqs = [
-  { q: "Where are your IPMAT coaching centres located?", a: "Our IPMAT classroom coaching is available across Delhi NCR — South Delhi (Hauz Khas), Gurugram (Sector 14), North Delhi (GTB Nagar), and Noida (Sector 62)." },
-  { q: "Are non-math or commerce students eligible for IPMAT coaching?", a: "Yes. IPMAT focuses on aptitude and reasoning, making it suitable for commerce and non-math background students." },
-  { q: "What is IPMAT and which IIMs accept it?", a: "IPMAT is an entrance exam for integrated management programs offered by IIM Indore, IIM Rohtak, IIM Jammu, IIM Bodh Gaya and more." },
-  { q: "Can a student apply for IPMAT Indore, Rohtak, and JIPMAT together?", a: "Yes. Students can appear for IPMAT Indore, IPMAT Rohtak, and JIPMAT in the same academic year." },
-  { q: "Is IPMAT tougher than JIPMAT?", a: "Yes. IPMAT Indore is considered the toughest, followed by Rohtak, while JIPMAT is relatively moderate." },
-  { q: "What courses do students get through IPMAT and JIPMAT?", a: "Both exams offer admission to five-year Integrated Programme in Management (IPM) at respective IIMs." },
-  { q: "Who will teach in the IPMAT classroom programs?", a: "Classes are led by highly experienced faculty from India, including mentors with IIM academic and teaching backgrounds." },
-  { q: "Does your IPMAT coaching include mock tests and analysis?", a: "Yes. Students receive regular sectional and full-length IPMAT mocks with detailed performance analysis and feedback." },
-  { q: "Can students manage school studies along with IPMAT preparation?", a: "Yes. Our batch structure is designed to balance school academics with consistent IPMAT preparation." },
+  { q: "Where are your CUET coaching centres located?", a: "Our CUET classroom coaching is available across Delhi NCR — South Delhi (Hauz Khas), Gurugram (Sector 14), North Delhi (GTB Nagar), and Noida (Sector 62)." },
+  { q: "What is CUET and which universities accept it?", a: "CUET (Common University Entrance Test) is a national-level entrance exam conducted by NTA for admission to undergraduate programmes at 250+ central, state, and deemed universities including Delhi University, JNU, BHU, Jamia Millia Islamia, and more." },
+  { q: "Who is eligible to appear for CUET?", a: "Any student who has passed or is appearing in Class 12 from a recognised board is eligible to appear for CUET. There is no upper age limit for most universities." },
+  { q: "What subjects can I choose in CUET?", a: "CUET offers a wide range of domain-specific subjects across sciences, humanities, commerce, and languages. You can choose subjects based on the university and programme you're applying to." },
+  { q: "Is CUET difficult to crack?", a: "CUET is competitive due to the large number of applicants. However, with structured coaching, regular mock tests, and smart preparation, students can secure high percentiles and top university admissions." },
+  { q: "Can a student apply to multiple universities through CUET?", a: "Yes. A single CUET score can be used to apply to multiple universities and programmes simultaneously, making it highly efficient." },
+  { q: "Who will teach in the CUET classroom programs?", a: "Classes are led by highly experienced faculty with deep expertise in CUET exam patterns, NTA marking schemes, and subject-specific teaching strategies." },
+  { q: "Does your CUET coaching include mock tests and analysis?", a: "Yes. Students receive regular sectional and full-length CUET mocks with detailed performance analysis, answer key discussions, and personalised feedback." },
+  { q: "Can students manage school studies along with CUET preparation?", a: "Yes. Our batch structure is designed to balance school academics with consistent CUET preparation without overburdening the student." },
 ];
 
 const FaqSection = () => {

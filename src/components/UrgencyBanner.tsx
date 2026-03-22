@@ -16,7 +16,7 @@ const UrgencyBanner = () => {
       <div className="flex items-center justify-center gap-3 flex-wrap">
         <span className="animate-pulse">🔥</span>
         <span>
-          Limited Seats! Only <strong className="text-yellow-300">{slotsLeft} slots left</strong> for IPMAT 2026 Batch
+          Limited Seats! Only <strong className="text-yellow-300">{slotsLeft} slots left</strong> for CUET 2026 Batch
         </span>
         <span className="hidden sm:inline">|</span>
         <button

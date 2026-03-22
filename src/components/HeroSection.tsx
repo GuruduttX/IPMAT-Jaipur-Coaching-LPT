@@ -10,8 +10,8 @@ const HeroSection = () => {
         {/* Left — Banner */}
         <div className="w-full lg:w-[65%]">
           <img
-            src="/Gemini_Generated_Image_gyhk8egyhk8egyhk (1).png"
-            alt="IPMAT 2026 — Prepare Now"
+            src="/Gemini_Generated_Image_vr8d85vr8d85vr8d (2).png"
+            alt="CUET 2026 — Prepare Now"
             className="w-full rounded-xl"
           />
         </div>

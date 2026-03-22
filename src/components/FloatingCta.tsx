@@ -6,7 +6,7 @@ const FloatingCta = () => (
     <div className="fixed right-5 bottom-6 z-50 hidden md:flex flex-col gap-3">
       {/* WhatsApp */}
       <a
-        href="https://wa.me/918750581505?text=Hi%2C%20I%20want%20to%20know%20more%20about%20IPMAT%20coaching"
+        href="https://wa.me/918750581505?text=Hi%2C%20I%20want%20to%20know%20more%20about%20CUET%20coaching"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-3"
@@ -51,7 +51,7 @@ const FloatingCta = () => (
       </a>
       <div className="my-2 w-px bg-gray-200" />
       <a
-        href="https://wa.me/918750581505?text=Hi%2C%20I%20want%20to%20know%20more%20about%20IPMAT%20coaching"
+        href="https://wa.me/918750581505?text=Hi%2C%20I%20want%20to%20know%20more%20about%20CUET%20coaching"
         target="_blank"
         rel="noopener noreferrer"
         className="flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-semibold text-gray-600 transition-colors active:bg-gray-50"

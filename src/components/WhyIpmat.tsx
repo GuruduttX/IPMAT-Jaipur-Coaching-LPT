@@ -1,15 +1,17 @@
+const scrollToForm = () => document.getElementById("register")?.scrollIntoView({ behavior: "smooth" });
+
 const cards = [
-  { title: "Direct Entry into IIM After 12th", text: "IPMAT gives you a rare opportunity to enter prestigious IIMs right after Class 12. Instead of waiting till post-graduation, you start your management journey early and grow within the IIM ecosystem from day one." },
-  { title: "Save 2–3 Critical Career Years", text: "Traditional routes include graduation + CAT + MBA. IPMAT compresses this journey into a single integrated program, saving years of uncertainty, repeated entrances, and career delays." },
-  { title: "Integrated BBA + MBA Curriculum", text: "IPMAT programs blend undergraduate fundamentals with postgraduate-level management thinking. Students develop business acumen, leadership skills, and analytical ability much earlier than conventional college students." },
-  { title: "Limited Seats, Massive ROI", text: "With very limited seats at top IIMs, IPMAT selections carry immense brand value. Graduates benefit from elite peer groups, strong alumni networks, and long-term career advantages that far outweigh the preparation effort." },
+  { title: "Direct Entry into Top Central Universities After 12th", text: "CUET gives you a single gateway to prestigious universities like Delhi University, JNU, BHU, Jamia Millia, and 250+ others. Instead of appearing for multiple separate entrance exams, one CUET score opens doors to the best institutions in India." },
+  { title: "One Exam, 250+ University Options", text: "CUET is accepted by over 250 central, state, and deemed universities. A single well-prepared attempt can secure admission to top programmes across sciences, humanities, commerce, and professional courses." },
+  { title: "Flexible Subject Choices", text: "Unlike rigid entrance exams, CUET allows you to choose subjects based on your strengths and interests. Whether you're from science, commerce, or arts, CUET lets you play to your strongest areas." },
+  { title: "Massive ROI from Top University Degrees", text: "Graduating from a top central university like DU, BHU, or JNU carries immense brand value. Strong alumni networks, top recruiters, and nationally recognised degrees ensure long-term career advantages." },
 ];
 
-const WhyIpmat = () => (
+const WhyCuet = () => (
   <section className="py-16 px-4 md:px-6" style={{ background: "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)" }}>
     <div className="mx-auto max-w-[1158px]">
       <h2 className="mb-8 text-center text-[28px] font-bold text-foreground">
-        Why IPMAT is a Smarter Career Path After 12th?
+        Why CUET is a Smarter Career Path After 12th?
       </h2>
       <div className="grid gap-6 sm:grid-cols-2">
         {cards.map((c) => (
@@ -33,8 +35,16 @@ const WhyIpmat = () => (
           </div>
         ))}
       </div>
+      <div className="mt-8 text-center">
+        <button
+          onClick={scrollToForm}
+          className="rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all duration-300 hover:bg-primary/90 active:scale-[0.97]"
+        >
+          Start Your CUET Preparation Today →
+        </button>
+      </div>
     </div>
   </section>
 );
 
-export default WhyIpmat;
+export default WhyCuet;

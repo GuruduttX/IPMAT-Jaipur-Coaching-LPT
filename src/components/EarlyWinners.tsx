@@ -9,12 +9,12 @@ const EarlyWinners = () => (
           "Early decisions create early winners."
         </h2>
         <p className="mt-4 text-sm leading-[1.75] text-muted-foreground">
-          IPMAT rewards students who act early, plan smartly, and prepare with intent. Those who wait often watch opportunities slip away.
+          CUET rewards students who act early, plan smartly, and prepare with intent. Those who wait often watch opportunities slip away.
         </p>
         <p className="mt-3 text-sm leading-[1.75] text-muted-foreground">
-          Start your journey with LPT's IPMAT Coaching in Delhi NCR and stay ahead of the curve from day one.
+          Start your journey with LPT's CUET Coaching in Delhi NCR and stay ahead of the curve from day one.
         </p>
-        <p className="mt-3 text-[15px] font-medium text-foreground">👉 Take the first step toward IIM today.</p>
+        <p className="mt-3 text-[15px] font-medium text-foreground">👉 Take the first step toward your dream university today.</p>
         <button
           onClick={scrollToForm}
           className="mt-6 rounded-lg bg-primary px-10 py-3.5 text-base font-bold text-primary-foreground transition-all duration-300 hover:bg-primary/90 active:scale-[0.97]"
@@ -26,7 +26,7 @@ const EarlyWinners = () => (
       <div className="md:w-1/2">
         <img
           src="https://live.lptedtech.com/wp-content/uploads/2025/12/IPMK2026.jpg"
-          alt="IIM 2026"
+          alt="CUET 2026"
           className="aspect-square w-full rounded-2xl object-cover"
           loading="lazy"
         />

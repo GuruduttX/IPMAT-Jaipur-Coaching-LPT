@@ -1,11 +1,11 @@
 const items = [
-  "You dream of studying at an IIM after Class 12.",
+  "You dream of studying at DU, JNU, BHU, or a top central university.",
   "You believe success isn't one-size-fits-all.",
   "You're ready to own a path most won't dare to take.",
-  "You're wired for leadership, strategy, and decision-making.",
+  "You're wired for academics, critical thinking, and excellence.",
   "You're serious about turning big dreams into real outcomes.",
   "You're ready to prepare consistently and stay disciplined.",
-  "You're aiming for a top rank, not just qualification.",
+  "You're aiming for a top rank in CUET, not just qualification.",
 ];
 
 const CheckIcon = () => (
@@ -19,7 +19,7 @@ const ProgramChecklist = () => (
     <div className="mx-auto flex max-w-[1158px] flex-col gap-10 md:flex-row md:items-center">
       <div className="md:w-1/2">
         <h2 className="mb-6 text-[28px] font-bold text-foreground" style={{ textWrap: "balance" }}>
-          Our IPMAT Coaching Program is for You, Only if:
+          Our CUET Coaching Program is for You, Only if:
         </h2>
         <ul className="space-y-0">
           {items.map((item) => (
