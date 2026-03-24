@@ -1,8 +1,8 @@
 const programs = [
   {
     label: "CUET Crash Course 2026",
-    img: "/cuet-crash-course-2026.webp",
-    imgFallback: "/cuet-crash-course-2026.png",
+    img: "/cuet-crash-course-2026-new.png",
+    imgFallback: "/cuet-crash-course-2026-new.png",
     discount: "40% OFF",
     rating: 4.5,
     reviews: 11375,
@@ -15,8 +15,8 @@ const programs = [
   },
   {
     label: "CUET 2026 Offline Batch",
-    img: "/cuet-2027-target-batch.webp",
-    imgFallback: "/cuet-2027-target-batch.png",
+    img: "/cuet-2026-offline-batch-new.png",
+    imgFallback: "/cuet-2026-offline-batch-new.png",
     discount: "23% OFF",
     rating: 5,
     reviews: 7757,
@@ -29,8 +29,8 @@ const programs = [
   },
   {
     label: "CUET 2027 Offline Batch",
-    img: "/cuet-2027-finisher-batch.webp",
-    imgFallback: "/cuet-2027-finisher-batch.png",
+    img: "/cuet-2027-offline-batch-new.png",
+    imgFallback: "/cuet-2027-offline-batch-new.png",
     discount: null,
     rating: 4.5,
     reviews: 3452,
