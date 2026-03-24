@@ -6,31 +6,29 @@ const HeroSection = () => {
 
   return (
     <section id="register" className="bg-white py-8 md:py-12 px-4 md:px-6">
-      <div className="mx-auto flex max-w-[1280px] flex-col gap-6 lg:flex-row lg:items-center">
-        {/* Left — Banner with fixed aspect ratio to prevent CLS */}
+      <div className="mx-auto flex max-w-[1280px] flex-col gap-6 lg:flex-row lg:items-start">
+        {/* Left — Banner */}
         <div className="w-full lg:w-[65%]">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100">
-            <picture>
-              <source 
-                media="(max-width: 640px)" 
-                srcSet="/hero-image-mobile.webp" 
-                type="image/webp" 
-              />
-              <source 
-                srcSet="/hero-image.webp" 
-                type="image/webp" 
-              />
-              <img
-                src="/hero-image-optimized.png"
-                alt="CUET 2026 — Prepare Now"
-                className="absolute inset-0 h-full w-full object-cover"
-                width={832}
-                height={624}
-                fetchPriority="high"
-                decoding="async"
-              />
-            </picture>
-          </div>
+          <picture>
+            <source 
+              media="(max-width: 640px)" 
+              srcSet="/hero-image-mobile.webp" 
+              type="image/webp" 
+            />
+            <source 
+              srcSet="/hero-image.webp" 
+              type="image/webp" 
+            />
+            <img
+              src="/hero-image-optimized.png"
+              alt="CUET 2026 — Prepare Now"
+              className="w-full rounded-xl"
+              width={832}
+              height={624}
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
 
         {/* Right — Form Card */}
