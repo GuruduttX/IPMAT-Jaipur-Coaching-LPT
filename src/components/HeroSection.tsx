@@ -13,6 +13,10 @@ const HeroSection = () => {
             src="/Gemini_Generated_Image_vr8d85vr8d85vr8d (2).png"
             alt="CUET 2026 — Prepare Now"
             className="w-full rounded-xl"
+            width={832}
+            height={624}
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
 
@@ -26,17 +30,20 @@ const HeroSection = () => {
               <input
                 type="text"
                 placeholder="Enter Your Name"
+                aria-label="Your Name"
                 className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
               />
               <input
                 type="email"
                 placeholder="Enter Your Email Address"
+                aria-label="Email Address"
                 className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
               />
               <div>
                 <input
                   type="tel"
                   placeholder="Phone Number (without +91)"
+                  aria-label="Phone Number"
                   maxLength={10}
                   value={phone}
                   onChange={(e) => {
@@ -52,11 +59,13 @@ const HeroSection = () => {
                 <input
                   type="text"
                   placeholder="Enter OTP"
+                  aria-label="OTP"
                   className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
                 />
               )}
               <select
                 defaultValue=""
+                aria-label="Current class"
                 className="h-12 w-full rounded-md border border-border bg-white px-3.5 text-base text-muted-foreground outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="" disabled>~Which class are you currently in?~</option>

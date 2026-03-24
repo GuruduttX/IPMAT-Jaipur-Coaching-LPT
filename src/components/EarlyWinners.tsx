@@ -28,7 +28,10 @@ const EarlyWinners = () => (
           src="https://live.lptedtech.com/wp-content/uploads/2025/12/IPMK2026.jpg"
           alt="CUET 2026"
           className="aspect-square w-full rounded-2xl object-cover"
+          width={560}
+          height={560}
           loading="lazy"
+          decoding="async"
         />
       </div>
     </div>

@@ -4,11 +4,15 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm" style={{ height: 70 }}>
       <div className="mx-auto flex h-full max-w-[1158px] items-center justify-between px-6">
-        <a href="#">
+        <a href="#" aria-label="LPT Edtech Home">
           <img
             src="https://live.lptedtech.com/wp-content/uploads/2025/03/Asset-1-1-1.svg"
             alt="LPT Edtech"
             className="h-[40px] w-auto"
+            width={150}
+            height={40}
+            loading="eager"
+            decoding="async"
           />
         </a>
         <button

@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://live.lptedtech.com" />
+    
+    <!-- Preload LCP image for faster initial render -->
+    <link rel="preload" as="image" href="/Gemini_Generated_Image_vr8d85vr8d85vr8d (2).png" fetchpriority="high" type="image/png" />
+    
+    <!-- Load fonts with display=swap -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
     <title>LPT Edtech — Best CUET Coaching in Delhi NCR</title>
     <meta name="description" content="Top CUET coaching institute in Delhi NCR. Prepare for DU, JNU, BHU & 250+ central universities with expert faculty at LPT Edtech. Centers in South Delhi, Gurugram, North Delhi & Noida." />
     <meta name="author" content="LPT Edtech" />
@@ -18,9 +27,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="LPT Edtech — Best CUET Coaching in Delhi NCR" />
     <meta name="twitter:image" content="https://live.lptedtech.com/wp-content/uploads/2026/02/IPMAT-PREPARE-AD-copy_1600X900.jpg.jpeg" />
+  </head>
 
-    <!-- Meta Pixel Code — Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
-    <script>
+  <body>
+    <main id="root"></main>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Meta Pixel Code — Deferred to not block rendering -->
+    <script defer>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -32,10 +46,5 @@
       // fbq('init', 'YOUR_PIXEL_ID');
       // fbq('track', 'PageView');
     </script>
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
