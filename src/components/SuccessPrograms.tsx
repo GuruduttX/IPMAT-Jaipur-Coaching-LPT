@@ -1,7 +1,8 @@
 const programs = [
   {
     label: "CUET Crash Course 2026",
-    img: "/cuet-crash-course-2026.png",
+    img: "/cuet-crash-course-2026.webp",
+    imgFallback: "/cuet-crash-course-2026.png",
     discount: "40% OFF",
     rating: 4.5,
     reviews: 11375,
@@ -14,7 +15,8 @@ const programs = [
   },
   {
     label: "CUET 2026 Offline Batch",
-    img: "/cuet-2027-target-batch.png",
+    img: "/cuet-2027-target-batch.webp",
+    imgFallback: "/cuet-2027-target-batch.png",
     discount: "23% OFF",
     rating: 5,
     reviews: 7757,
@@ -27,7 +29,8 @@ const programs = [
   },
   {
     label: "CUET 2027 Offline Batch",
-    img: "/cuet-2027-finisher-batch.png",
+    img: "/cuet-2027-finisher-batch.webp",
+    imgFallback: "/cuet-2027-finisher-batch.png",
     discount: null,
     rating: 4.5,
     reviews: 3452,
@@ -76,21 +79,24 @@ const SuccessPrograms = () => (
         {programs.map((p) => (
           <div key={p.label} className="overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
             {/* Image with discount badge */}
-            <div className="relative w-full">
+            <div className="relative w-full aspect-[16/10] bg-gray-100">
               {p.discount && (
                 <span className="absolute left-3 top-3 z-10 rounded bg-cta-red px-2.5 py-1 text-xs font-bold text-white">
                   {p.discount}
                 </span>
               )}
-              <img
-                src={p.img}
-                alt={p.label}
-                className="aspect-[16/10] w-full object-cover"
-                width={352}
-                height={220}
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source srcSet={p.img} type="image/webp" />
+                <img
+                  src={p.imgFallback}
+                  alt={p.label}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  width={352}
+                  height={220}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
             
             {/* Content */}

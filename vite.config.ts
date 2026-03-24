@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import viteCompression from "vite-plugin-compression";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -11,7 +13,38 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react()].filter(Boolean),
+  plugins: [
+    react(),
+    // Optimize images during build
+    ViteImageOptimizer({
+      png: {
+        quality: 80,
+        compressionLevel: 9,
+      },
+      jpeg: {
+        quality: 80,
+      },
+      jpg: {
+        quality: 80,
+      },
+      webp: {
+        quality: 80,
+        lossless: false,
+      },
+    }),
+    // Gzip compression
+    viteCompression({
+      algorithm: "gzip",
+      ext: ".gz",
+      threshold: 1024,
+    }),
+    // Brotli compression (better than gzip)
+    viteCompression({
+      algorithm: "brotliCompress",
+      ext: ".br",
+      threshold: 1024,
+    }),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -24,6 +57,11 @@ export default defineConfig(({ mode }) => ({
       compress: {
         drop_console: mode === "production",
         drop_debugger: true,
+        passes: 2,
+      },
+      mangle: true,
+      format: {
+        comments: false,
       },
     },
     // Optimize chunk splitting
@@ -46,7 +84,7 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name?.split(".") || [];
           const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
             return `assets/images/[name]-[hash][extname]`;
           }
           return `assets/[name]-[hash][extname]`;
@@ -58,9 +96,11 @@ export default defineConfig(({ mode }) => ({
     // Generate source maps only in development
     sourcemap: mode !== "production",
     // Target modern browsers for smaller bundles
-    target: "es2020",
+    target: "esnext",
     // CSS code splitting
     cssCodeSplit: true,
+    // Inline small assets
+    assetsInlineLimit: 4096,
     // Report compressed size
     reportCompressedSize: true,
   },

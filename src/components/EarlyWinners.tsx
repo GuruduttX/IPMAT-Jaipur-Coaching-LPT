@@ -24,15 +24,17 @@ const EarlyWinners = () => (
       </div>
       {/* Image */}
       <div className="md:w-1/2">
-        <img
-          src="https://live.lptedtech.com/wp-content/uploads/2025/12/IPMK2026.jpg"
-          alt="CUET 2026"
-          className="aspect-square w-full rounded-2xl object-cover"
-          width={560}
-          height={560}
-          loading="lazy"
-          decoding="async"
-        />
+        <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gray-100">
+          <img
+            src="https://live.lptedtech.com/wp-content/uploads/2025/12/IPMK2026.jpg"
+            alt="CUET 2026"
+            className="absolute inset-0 h-full w-full object-cover"
+            width={560}
+            height={560}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       </div>
     </div>
   </section>
