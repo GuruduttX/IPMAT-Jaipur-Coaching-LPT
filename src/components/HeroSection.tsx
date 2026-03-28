@@ -1,15 +1,43 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 
 const HeroSection = () => {
-  const [phone, setPhone] = useState("");
-  const [showOtp, setShowOtp] = useState(false);
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load the NoPaperForms script dynamically after the widget div is in the DOM
+    const loadWidget = () => {
+      const win = window as any;
+
+      // If the NPF init function already exists, just re-trigger it
+      if (typeof win.npf_d === "function") {
+        win.npf_d();
+        return;
+      }
+
+      // Otherwise, load the script fresh
+      const existing = document.querySelector(
+        'script[src*="nopaperforms"]'
+      );
+      if (existing) existing.remove();
+
+      const s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://widgets.in6.nopaperforms.com/emwgts.js";
+      document.body.appendChild(s);
+    };
+
+    // Small delay to ensure the DOM element is painted before script runs
+    const timer = setTimeout(loadWidget, 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section id="register" className="bg-white py-8 md:py-12 px-4 md:px-6">
-      <div className="mx-auto flex max-w-[1280px] flex-col gap-6 lg:flex-row lg:items-start">
+      <div className="mx-auto flex max-w-[1280px] flex-col gap-6 lg:flex-row lg:items-stretch">
         {/* Left — Banner */}
-        <div className="w-full lg:w-[65%]">
-          <picture>
+        <div className="w-full lg:w-[60%] flex rounded-xl overflow-hidden bg-[#f3f4f6]">
+          <picture className="w-full flex">
             <source 
               media="(max-width: 640px)" 
               srcSet="/hero-image-mobile.webp" 
@@ -22,7 +50,7 @@ const HeroSection = () => {
             <img
               src="/hero-image-optimized.png"
               alt="CUET 2026 — Prepare Now"
-              className="w-full rounded-xl"
+              className="w-full h-auto object-contain rounded-xl"
               width={832}
               height={624}
               fetchPriority="high"
@@ -31,67 +59,18 @@ const HeroSection = () => {
           </picture>
         </div>
 
-        {/* Right — Form Card */}
-        <div className="w-full lg:w-[35%]">
-          <div className="rounded-2xl border border-border bg-white p-8 shadow-lg">
+        {/* Right — NoPaperForms Widget */}
+        <div className="w-full lg:w-[40%]">
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-lg">
             <h2 className="text-[22px] font-bold text-foreground">Limited Slots!</h2>
             <p className="mt-1 text-sm text-muted-foreground">Fill the form to register or request more details.</p>
-
-            <form className="mt-6 space-y-3" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                aria-label="Your Name"
-                className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
-              />
-              <input
-                type="email"
-                placeholder="Enter Your Email Address"
-                aria-label="Email Address"
-                className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
-              />
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Phone Number (without +91)"
-                  aria-label="Phone Number"
-                  maxLength={10}
-                  value={phone}
-                  onChange={(e) => {
-                    const val = e.target.value.replace(/\D/g, "");
-                    setPhone(val);
-                    if (val.length >= 10) setShowOtp(true);
-                  }}
-                  className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
-                />
-                <p className="mt-1 text-xs text-muted-foreground">{phone.length} of 10 max characters.</p>
-              </div>
-              {showOtp && (
-                <input
-                  type="text"
-                  placeholder="Enter OTP"
-                  aria-label="OTP"
-                  className="h-12 w-full rounded-md border border-border px-3.5 text-base outline-none focus:ring-2 focus:ring-primary/40"
-                />
-              )}
-              <select
-                defaultValue=""
-                aria-label="Current class"
-                className="h-12 w-full rounded-md border border-border bg-white px-3.5 text-base text-muted-foreground outline-none focus:ring-2 focus:ring-primary/40"
-              >
-                <option value="" disabled>~Which class are you currently in?~</option>
-                <option>Class 10th</option>
-                <option>Class 11th</option>
-                <option>Class 12th</option>
-                <option>Class 12th Passed</option>
-              </select>
-              <button
-                type="submit"
-                className="h-12 w-full rounded-md bg-cta-red text-[17px] font-bold text-white transition-colors duration-300 hover:bg-cta-red/90 active:scale-[0.97]"
-              >
-                Register Now
-              </button>
-            </form>
+            <div className="mt-4" ref={widgetRef}>
+              <div
+                className="npf_wgts"
+                data-height="400px"
+                data-w="1b77a6fea5e0e0e10b6d10b8d9637367"
+              ></div>
+            </div>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ const FloatingCta = () => (
     <div className="fixed right-5 bottom-6 z-50 hidden md:flex flex-col gap-3">
       {/* WhatsApp */}
       <a
-        href="https://wa.me/918750581505?text=Hi%2C%20I%20want%20to%20know%20more%20about%20CUET%20coaching"
+        href="https://wa.me/919217577446?text=Hi%2C%20I%20want%20to%20know%20more%20about%20CUET%20coaching"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-3"
@@ -22,7 +22,7 @@ const FloatingCta = () => (
       </a>
       {/* Call */}
       <a
-        href="tel:+918750581505"
+        href="tel:+919217577446"
         className="group flex items-center gap-3"
       >
         <span className="rounded-lg bg-gray-900/80 px-3 py-1.5 text-xs font-semibold text-white opacity-0 transition-all duration-300 group-hover:opacity-100 shadow-lg">
@@ -39,7 +39,7 @@ const FloatingCta = () => (
     {/* Mobile — Sticky bottom bar */}
     <div className="fixed inset-x-0 bottom-0 z-50 flex md:hidden bg-white shadow-[0_-2px_16px_rgba(0,0,0,0.08)]">
       <a
-        href="tel:+918750581505"
+        href="tel:+919217577446"
         className="flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-semibold text-gray-600 transition-colors active:bg-gray-50"
       >
         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#AE202C]/10">
@@ -51,7 +51,7 @@ const FloatingCta = () => (
       </a>
       <div className="my-2 w-px bg-gray-200" />
       <a
-        href="https://wa.me/918750581505?text=Hi%2C%20I%20want%20to%20know%20more%20about%20CUET%20coaching"
+        href="https://wa.me/919217577446?text=Hi%2C%20I%20want%20to%20know%20more%20about%20CUET%20coaching"
         target="_blank"
         rel="noopener noreferrer"
         className="flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-semibold text-gray-600 transition-colors active:bg-gray-50"

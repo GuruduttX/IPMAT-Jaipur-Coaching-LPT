@@ -49,7 +49,7 @@ const Index = () => (
         heading="Talk to experts who understand CUET exam patterns, top university admissions, and preparation strategies inside out."
         buttons={[
           { label: "Request a Callback", style: "filled", onClick: scrollToForm },
-          { label: "📞 8750581505", style: "outline", href: "tel:+918750581505" },
+          { label: "📞 9217577446", style: "outline", href: "tel:+919217577446" },
         ]}
       />
       <CuetExamPattern />

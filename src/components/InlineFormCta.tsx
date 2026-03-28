@@ -76,7 +76,7 @@ const InlineFormCta = () => {
                   Register Now — Limited Seats →
                 </button>
                 <p className="mt-5 text-xs text-white/60">
-                  📞 Or call us at <a href="tel:+918750581505" className="text-yellow-400 hover:underline font-medium">8750581505</a>
+                  📞 Or call us at <a href="tel:+919217577446" className="text-yellow-400 hover:underline font-medium">9217577446</a>
                 </p>
               </div>
             </div>

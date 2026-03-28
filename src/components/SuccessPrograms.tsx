@@ -78,8 +78,8 @@ const SuccessPrograms = () => (
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {programs.map((p) => (
           <div key={p.label} className="overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
-            {/* Image with discount badge */}
-            <div className="relative w-full aspect-[16/10] bg-gray-100">
+            {/* Image with discount badge - aspect ratio container prevents CLS */}
+            <div className="relative w-full bg-gray-100" style={{ aspectRatio: '16/10' }}>
               {p.discount && (
                 <span className="absolute left-3 top-3 z-10 rounded bg-cta-red px-2.5 py-1 text-xs font-bold text-white">
                   {p.discount}

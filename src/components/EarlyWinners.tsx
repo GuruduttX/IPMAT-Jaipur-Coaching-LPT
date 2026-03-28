@@ -22,9 +22,9 @@ const EarlyWinners = () => (
           REGISTER NOW
         </button>
       </div>
-      {/* Image */}
+      {/* Image - with aspect ratio container to prevent CLS */}
       <div className="md:w-1/2">
-        <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gray-100">
+        <div className="relative w-full overflow-hidden rounded-2xl bg-gray-100" style={{ aspectRatio: '1/1' }}>
           <img
             src="https://live.lptedtech.com/wp-content/uploads/2025/12/IPMK2026.jpg"
             alt="CUET 2026"
