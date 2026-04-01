@@ -14,7 +14,7 @@ const programs = [
     popular: false,
   },
   {
-    label: "CUET 2026 Offline Batch",
+    label: "CUET 2027 Offline Batch",
     tagline: "Comprehensive year-long program with in-depth coverage",
     discount: "23% OFF",
     rating: 5,
